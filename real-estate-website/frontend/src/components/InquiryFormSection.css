@@ -1,0 +1,109 @@
+.inquiry-form-section {
+  background-color: #003366;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.inquiry-form-container {
+  background-color: #fff;
+  padding: 3rem 4rem 4rem 4rem;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: left;
+}
+
+.inquiry-form-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #003366;
+  text-align: center;
+}
+
+.inquiry-form-container p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.inquiry-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 45%;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #003366;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.form-group.full-width {
+  flex: 1 1 100%;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #003366;
+  text-align: left;
+  flex: 1 1 100%;
+  order: -1;
+}
+
+.checkbox-group a {
+  color: #b22222;
+  text-decoration: underline;
+}
+
+.submit-inquiry-button {
+  background-color: #b22222;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+  flex: 1 1 100%;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submit-inquiry-button:hover {
+  background-color: #7a1616;
+}

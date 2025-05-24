@@ -1,0 +1,306 @@
+.users-management {
+  padding: 30px;
+  background-color: #f9fafb;
+  min-height: calc(100vh - 80px);
+}
+
+.users-management h1 {
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #111827;
+}
+
+.users-management p {
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.control-panel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-user-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.refresh-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.add-user-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.refresh-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+.users-table-container {
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.users-table th,
+.users-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.users-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.users-table tr:not(:last-child) td {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.users-table tr:hover td {
+  background-color: #f9fafb;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.role-badge.admin {
+  background-color: #fecaca;
+  color: #991b1b;
+}
+
+.role-badge.client {
+  background-color: #bfdbfe;
+  color: #1e40af;
+}
+
+.role-badge.agency {
+  background-color: #c7d2fe;
+  color: #3730a3;
+}
+
+.status {
+  display: inline-block;
+  width: 60px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.status.verified, .status.approved {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status.not-verified, .status.not-approved {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.edit-btn:hover {
+  background-color: #d1d5db;
+}
+
+.approve-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.approve-btn:hover {
+  background-color: #059669;
+}
+
+.disapprove-btn {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.disapprove-btn:hover {
+  background-color: #d97706;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.success-message {
+  padding: 10px 15px;
+  background-color: #dcfce7;
+  color: #166534;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  padding: 10px 15px;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.no-users {
+  text-align: center;
+  color: #6b7280;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  max-width: 90%;
+  padding: 24px;
+}
+
+.modal h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-right: 8px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.save-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.cancel-btn {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.cancel-btn:hover {
+  background-color: #d1d5db;
+}
+
+/* User avatar styles */
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4f46e5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+} 

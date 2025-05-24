@@ -1,0 +1,55 @@
+.property-listings {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #003366;
+  background-color: #ffffff;
+}
+
+.properties-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.property-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 280px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.property-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.explore-button {
+  margin-top: 10px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.explore-button:hover {
+  background-color: #0055a5;
+}
+
+@media (max-width: 600px) {
+  .properties-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .property-card {
+    width: 90%;
+  }
+}
